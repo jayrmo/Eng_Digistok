@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin-left: 19%;
+  margin-top: 1%;
+  color: #8d0000;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 300 !important;
+}
+body {
+  font-family: Arial, sans-serif;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+form {
+  width: 80%;
+  margin-left: 19%;
+}
+
+.row {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  vertical-align: baseline;
+  font-family: Arial, sans-serif;
+}
+
+#categoriaAdd {
+  width: 260px;
+  height: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #06187a;
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 100px;
+  margin-bottom: 10px;
+}
+
+label {
+  flex-direction: column;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input-class {
+  width: 80%;
+  height: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #06187a;
+  border-radius: 5px;
+  text-align: left;
+}
+
+/*
+.arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #007BFF; // Cor da seta
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.arrow-up {
+    top: -25px; // Ajuste a posição da seta para cima
+    left: 20px; // Posiciona a seta para cima
+}
+
+.arrow-down {
+    bottom: -25px; // Ajuste a posição da seta para baixo
+    left: 20px; // Posiciona a seta para baixo
+}
+*/
+.descricao-textarea {
+  width: 80%;
+  height: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #06187a;
+  border-radius: 5px;
+  text-align: left;
+  text-align: top;
+}
+/* Estilo para quando a caixa de texto está em foco */
+.descricao-textarea:focus {
+  border: 2px solid #000000; /* Cor da borda quando focada */
+  outline: none; /* Remove o contorno padrão */
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5); /* Sombra ao focar */
+}
+
+input:focus {
+  border: 2px solid #000000; /* Cor da borda quando focada */
+  outline: none; /* Remove o contorno padrão */
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5); /* Sombra ao focar */
+}
+
+button[Type="button"] {
+  display: inline-block;
+  width: 10%;
+  height: 30px;
+  margin-bottom: 20px;
+  padding: none;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.salvar:hover {
+  background-color: #58a95b;
+}
+.salvar {
+  background-color: #198f1e;
+}
+
+.listar:hover {
+  background-color: #be750e;
+}
+.listar {
+  background-color: #ea7d00;
+}
+
+select {
+  width: auto;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  font-size: 13px;
+}
+select:focus {
+  border: 2px solid #000000; /* Cor da borda quando focada */
+  outline: none; /* Remove o contorno padrão */
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5); /* Sombra ao focar */
+}
+.form-row {
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+#flutuantes {
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.add {
+  padding-top: 40%;
+  padding-left: 10%;
+}
+
+#add {
+  cursor: pointer;
+}
+
+#update {
+  cursor: pointer;
+}
+
+#delet{
+  cursor: pointer;
+}
+.categoria-area {
+  width: auto;
+  height: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #06187a;
+  border-radius: 5px;
+  text-align: left;
+  text-align: top;
+}
+
+/* Estilo para quando a caixa de texto está em foco */
+.categoria-area:focus {
+  border: 2px solid #000000; /* Cor da borda quando focada */
+  outline: none; /* Remove o contorno padrão */
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5); /* Sombra ao focar */
+}
+/*
+.categoria-container {
+  display: flex;
+  align-items: baseline;
+  gap: 30px;
+  color: #353535;
+}
+*/
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 5px;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+/* Estilo geral para a mensagem */
+#mensagem {
+  font-size: 13px; /* Tamanho da fonte */
+  padding: 10px; /* Espaçamento interno */
+  margin: 15px; /* Espaçamento superior */
+  border-radius: 5px; /* Cantos arredondados */
+  text-align: center; /* Centraliza o texto */
+  max-width: 300px; /* Define uma largura máxima */
+  display: none; /* Inicialmente escondido */
+  width: 100%; /* Preenche a largura do contêiner */
+}
+
+/* Estilo para a mensagem de sucesso */
+#mensagem.success {
+  background-color: #d4edda; /* Fundo verde claro */
+  color: #155724; /* Texto verde escuro */
+  border: 1px solid #c3e6cb; /* Borda verde clara */
+}
+
+/* Estilo para a mensagem de erro */
+#mensagem.error {
+  background-color: #f8d7da; /* Fundo vermelho claro */
+  color: #721c24; /* Texto vermelho escuro */
+  border: 1px solid #f5c6cb; /* Borda vermelha clara */
+}
+
+
+
+
+
+
+
+/*Inicio CSS Barra Lateral*/
+
+.BarraLateral {
+  background-color: #1bbfe1;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  max-width: 18%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.LogoMarca {
+  margin-top: 8%;
+  height: auto; /*Ajusta a altura ao tamanho da tela*/
+  max-width: 80%; /*A largura máxima será 80%*/
+  cursor: pointer;
+}
+
+.menus {
+  height: auto; /*Altura maxima ajustavel*/
+  max-width: auto; /*Largura maxima ajustavel*/
+  margin-top: 20%;
+  margin-left: 5%;
+  text-align: left;
+  font-size: large;
+  color: rgb(0, 0, 0);
+}
+
+.opcao-menu {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  padding: 5%;
+  cursor: pointer;
+}
+.opcao-menu:hover {
+  color: #001aff;
+}
+
+.menus-suspensos ul {
+  list-style: none; /*Remove os marcadores padrão(ponto,seta)*/
+  padding: 0; /*Remove o preenchimento interno,texto cola na  borda*/
+}
+
+.menu-item {
+  position: relative; /*garante q seja posicionado  em relação ao elemento pai*/
+  cursor: pointer;
+}
+
+.submenu {
+  display: none; /* Escondido inicialmente */
+  position: absolute;
+  left: 100%; /* Alinha a lista à direita do item */
+  top: 0;
+  background-color: #1bbfe1;
+  padding: 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999; /* Fica por cima de tudo */
+  width: 150px; /* Largura janela que abre*/
+}
+
+.submenu li {
+  margin: 0;
+  padding: 5%;
+}
+
+.submenu li a {
+  color: white;
+  text-decoration: none; /*faz com que o texto não tenha sublinhado*/
+}
+
+.submenu li a:hover {
+  color: #001aff;
+}
+
+.menu-item:hover .submenu {
+  display: block; /* Exibe a lista ao passar o mouse */
+}
+
+.menu-usuario {
+  position: fixed;
+  width: 16.5%; /*Ajusta a largura dentro da barra lateral*/
+  bottom: 2%; /*ajusta para 2% do inferior da pagina*/
+  height: 2%; /*Altura*/
+  padding: 10px; /* Espaçamento interno */
+  background: linear-gradient(
+    15deg,
+    #001aff,
+    #2a7de9,
+    #6bbbf0,
+    #8cd1ff
+  ); /* Gradiente radial */
+  text-align: center; /* Centraliza o texto */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  color: aliceblue;
+  display: flex;
+  justify-content: start; /* centraliza horizontal na faixa*/
+  align-items: center; /*Centraliza vertical na faixa*/
+}
+
+.menu-usuario:hover {
+  color: #001aff;
+  cursor: pointer;
+}
+
+.usuario {
+  font-size: large;
+  cursor: pointer;
+}
+
+.icon-user {
+  margin-left: 5%;
+  margin-right: 10%;
+  cursor: pointer;
+}
+
+
+
+
+
+/*Final CSS Barra Lateral*/
