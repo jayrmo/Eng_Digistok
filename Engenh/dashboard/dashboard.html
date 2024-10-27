@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digistock - Dashboard</title>
+    <link rel="stylesheet" href="../dashboard/style-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="../dashboard/script-dashboard.js"></script>
+</head>
+<body>
+    <!--Inicio Barra Lateral  -->
+    <div class="BarraLateral">
+        <img src="../Imag/LogoMarca.svg" alt="LogoMarca" class="LogoMarca" />
+  
+        <!-- Grid com menus Laterais-->
+        <div class="menus">
+          <div class="menus-suspensos">
+            <ul>
+              <!--Menu Dashboard-->
+              <div class="opcao-menu" id="menu-dashboard">
+                <i class="fa-solid fa-chart-pie" id="icon-left"></i>
+                <a class="menu-text"  onclick="abrirPagina('../dashboard/dashboard.html')">Dashboard</a>
+              </div>
+  
+              <!--Menu Cadastrar-->
+              <li class="menu-item">
+                <div class="opcao-menu" id="menu-cadastrar">
+                  <i class="fa-regular fa-pen-to-square icon-left"></i>
+                  <span class="menu-text">Cadastrar</span>
+                  <i class="fa-solid fa-chevron-right icon-rigth"></i>
+                </div>
+                <ul class="submenu">
+                  <li><a onclick="abrirPagina('../cadastrarproduto/cadastra.html')">Produto</a></li>
+                  <li><a >Categoria</a></li>
+                  <li><a >Fornecedor</a></li>
+                  <li><a >Locais</a></li>
+                  <li><a >NCM</a></li>
+                </ul>
+              </li>
+              
+              <!--Menu Estoque-->
+              <li class="menu-item">
+                <div class="opcao-menu" id="menu-estoque">
+                  <i class="fa-solid fa-boxes-stacked icon-left"></i>
+                  <span class="menu-text">Estoque</span>
+                  <i class="fa-solid fa-chevron-right icon-rigth"></i>
+                </div>
+                <ul class="submenu">
+                  <li><a >Lançamentos</a></li>
+                  <li><a >Transferências</a></li>
+                  <li><a  onclick="abrirPagina('../listarProduto/lista-produtos.html')">Listar Produtos</a></li>
+                  <li><a >Saldo em Estoque</a></li>
+                  <li><a >Comodato</a></li>
+                  <li><a >Correção</a></li>
+                  <li><a >Produtos em Falta</a></li>
+                  <li><a >Atualizar Estoque</a></li>
+                  <li><a >Compras</a></li>
+                </ul>
+              </li>
+  
+              <!--Menu Vendas-->
+              <li class="menu-item">
+                <div class="opcao-menu" id="menu-vendas">
+                  <i class="fa-solid fa-shop icon-left"></i>
+                  <span class="menu-text">Vendas</span>
+                  <i class="fa-solid fa-chevron-right icon-rigth"></i>
+                </div>
+                <ul class="submenu">
+                  <li><a >Realizar Venda</a></li>
+                  <li><a >Criar Pedido</a></li>
+                  <li><a >Listar Pedido</a></li>
+                  <li><a >Editar Pedido</a></li>
+                  <li><a >Cancelar Pedido</a></li>
+                </ul>
+              </li>
+  
+              <!--Menu Financeiro-->
+              <li class="menu-item">
+                <div class="opcao-menu" id="menu-financeiro">
+                  <i class="fa-solid fa-hand-holding-dollar icon-left"></i>
+                  <span class="menu-text">Financeiro</span>
+                  <i class="fa-solid fa-chevron-right icon-rigth"></i>
+                </div>
+                <ul class="submenu">
+                  <li><a >Consultar Pagamentos</a></li>
+                  <li><a >Consultar Faturas</a></li>
+                  <li><a >Balanço</a></li>
+                </ul>
+              </li>
+  
+              <!--Menu Fiscal-->
+              <div class="opcao-menu" id="menu-fiscal">
+                <i class="fa-solid fa-file-invoice icon-left"></i>
+                <span class="menu-text">Fiscal</span>
+              </div>
+  
+              <!--Menu Configurações-->
+              <div class="opcao-menu" id="menu-configuracao">
+                <i class="fa-solid fa-gear" id="botao-config"></i>
+                <span class="menu-text">Configurações</span>
+              </div>
+            </ul>
+          </div>
+        </div>
+  
+        <!--Barra inferior do usuario-->
+        <div class="menu-usuario">
+          <i class="fa-solid fa-circle-user fa-2x icon-user" id="menu-use"></i>
+          <p class="usuario" id="menu-user">Usuario</p>
+        </div>
+      </div>
+
+
+
+    <div class="conteudo-dashboard">
+        <h1 class="titulo-dashboard">Dashboard</h1>
+        
+        <div class="cards-metricas">
+            <div class="card-metrica vendas">
+                <div class="titulo-card">Vendas do dia</div>
+                <div class="valor-card">R$ 0,0</div>
+            </div>
+            <div class="card-metrica pagar">
+                <div class="titulo-card">A pagar hoje</div>
+                <div class="valor-card">R$ 0,0</div>
+            </div>
+            <div class="card-metrica receber">
+                <div class="titulo-card">A receber hoje</div>
+                <div class="valor-card">R$ 0,0</div>
+            </div>
+        </div>
+
+        <div class="container-graficos">
+            <div class="card-grafico">
+                <h3>Vendas por categoria (27/08/2024)</h3>
+                <canvas id="grafico-pizza"></canvas>
+            </div>
+            <div class="card-grafico">
+                <h3>Receita x Despesa x Saldo</h3>
+                <div class="botoes-grafico">
+                    <button class="btn-grafico ativo">Consolidado</button>
+                    <button class="btn-grafico">Receita e Desp</button>
+                    <button class="btn-grafico">Saldo</button>
+                </div>
+                <canvas id="grafico-linha"></canvas>
+            </div>
+        </div>
+
+        <div class="container-semestre">
+            <div class="card-grafico">
+                <h3>Vendas Primeiro Semestre</h3>
+                <canvas id="grafico-barras"></canvas>
+            </div>
+        </div>
+
+        <div class="alertas-estoque">
+            <h3>Alerta de estoque</h3>
+            <div class="item-alerta">
+                <span>Camisetas</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+            <div class="item-alerta">
+                <span>Shorts</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+            <div class="item-alerta">
+                <span>Calças</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+            <div class="item-alerta">
+                <span>Tênis</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+            <div class="item-alerta">
+                <span>Moletons</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+            <div class="item-alerta">
+                <span>Jaquetas</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

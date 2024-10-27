@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        body {
+            font-family:Inter;
+            background-image: linear-gradient(45deg,#24C6DC,#514A9D);
+        }
+        .tela-login{
+            font-size: 7px;
+            font-family: inter;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(30%, -50%);
+            color: white;
+            
+        }
+        
+        input{
+            margin:10px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            border-radius: 0.5em;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(70%,30%);
+        }
+        .usuario {
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(70%,-100%);
+        }
+
+        button{
+            /*posição do botão*/
+            position: inherit;
+            top: 50%;
+            left: 50%;
+            transform: translate(357%, 170%);
+            /*-------------------------------*/
+            background-color:#007797;
+            border: none;
+            padding: 13px;
+            width: 100px;
+            border-radius: 0.5em;
+            color: white;
+        }
+        button:hover{
+            background-color: deepskyblue;
+            cursor: pointer;
+        }
+        .recuperar-senha {
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(130%,600%);
+        }
+        .boas-vindas{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-55%,-370%);
+        }
+        .logo{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-230%,-40%);
+        }
+        .logo-nome{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-75%,-40%);
+        }
+        .incone-usuario{
+            max-width:50px;
+            max-height:50px;
+            width: auto;
+            height: auto;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(650%,-70%);
+        }
+    </style>
+</head>
+<body>
+    </h1>
+    <img src="" alt="">
+    <div class="tela-login">
+        <input class = "usuario" type="text"placeholder="USUÁRIO">
+        <br><br>
+        <input class ="senha" type="password"  placeholder="SENHA">
+        <br><br>
+        <button>ENTRAR</button>
+    </div>
+    <div class = "recuperar-senha">
+        <a href="#" style = "color: white">Esqueci minha senha 
+        </a>
+    </div>
+    <img class = "logo" src="https://i.ibb.co/VD2xDtF/Icon.png">
+    <img class = "logo-nome" src="https://i.ibb.co/WpQh5Gz/Group-1.png">
+    <img class = "boas-vindas" src="https://i.ibb.co/HKmGjQ0/Boas-Vindas.png">
+    <img class = "incone-usuario"src="https://i.ibb.co/cN7tZPV/imagem-2024-10-25-230159106.png">
+</body>
+</html>
