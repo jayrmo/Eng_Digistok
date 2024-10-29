@@ -23,7 +23,7 @@ Este projeto é uma aplicação web completa para gerenciamento de estoque, proj
 </div>
 
 ## Autor
--Jayr martins
+- Jayr martins
 <div style="display: inline-block">
 <a href="https://github.com/jayrmo"><img align="center" width='50' height='50' src="https://github.com/devicons/devicon/blob/master/icons/github/github-original-wordmark.svg"</a>
 <a href="https://www.instagram.com/jayrmartins5/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"</a>
