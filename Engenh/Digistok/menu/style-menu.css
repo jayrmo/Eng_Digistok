@@ -122,8 +122,93 @@
 
     }
 
+    /*container icon e usuario*/
+    .nav .menu-usuario .container {
+        background: linear-gradient(
+                15deg,
+                #001aff,
+                #2a7de9,
+                #6bbbf0,
+                #8cd1ff
+        );
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        position: fixed;
+        bottom: 3.6%;
+
+    }
+
+    /*conjunto nome icon usuario*/
+    .nav .menu-usuario .user {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        height: 35px; /*Altura*/
+        width: 30vh;
+
+    }
+
+    /*Nome usuario*/
+    .nav .menu-usuario .user span {
+        padding: 15px;
+        font-size: large;
+        font-family: "Futura Bk BT";
+    }
+
+    /*Hover conjunto usuario*/
+    .nav .menu-usuario .user:hover {
+        transform: scale(0.95);
+        color: #001aff;
+
+    }
+
+
+    /*Imagem usuario*/
+    .nav .menu-usuario img {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        margin: 15px;
+    }
+
+    /*Hover usuario*/
+    .nav .menu-usuario .user:hover ~ .perfil {
+        display: block;
+    }
+
+    /*Opção usuario perfil*/
+    .nav .menu-usuario .perfil {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        bottom: 4%;
+        margin-left: 30vh;
+        background: #1bbfe1;
+        width: 145px;
+        box-shadow: 2px -2px 5px 2px rgba(5, 5, 5, 0.3);
+        border-radius: 5px;
+
+    }
+
+    /*Texto perfil*/
+    .nav .menu-usuario .perfil a {
+        text-decoration: none;
+        color: black;
+        font-family: "Futura Bk BT";
+        padding: 10px;
+
+    }
+
+    /*hover texto perfil*/
+    .nav .menu-usuario .perfil a > li:hover {
+        background: #2a7de9;
+        border-radius: 5px;
+        transform: scale(0.95);
+    }
+
 
 }
+
 
 /*---------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------Tela 600PX---------------------------------------------*/
@@ -242,7 +327,15 @@
         opacity: 1;
         visibility: visible;
     }
-
+    /*Imagem usuario*/
+    .nav .menu-usuario img {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        margin: 9px;
+        position: fixed;
+        bottom: 10px;
+    }
 }
 
 /*---------------------------------------------------------------------------------------------------------*/
