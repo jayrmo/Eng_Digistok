@@ -1,0 +1,314 @@
+/*Geral*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------Tela acima de 601PX---------------------------------------------*/
+@media screen and (min-width: 601px) {
+    .btn-list {
+        display: none;
+    }
+
+    /*Logo*/
+    .logo {
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    /*Hover Logo*/
+    .logo:hover {
+        transform: scale(0.95);
+    }
+
+    /*Geral barra lateral*/
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 30vh;
+        padding: 20px 0px 20px 0px; /* Acolchoamento: topo, direita, fundo, esquerda */
+        background-color: #1bbfe1;
+        transition: opacity 0.50s ease;
+        box-shadow: 3px 0 0 #475aff;
+    }
+
+    /*Menus*/
+    .nav ul li > a {
+        position: relative;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        text-decoration: none;
+        padding: 15px 10px 15px 10px;
+        border-radius: 5px;
+        width: 29vh;
+        color: black;
+        transition: 0.07s ease-in;
+
+
+    }
+
+    .nav ul li {
+        list-style: none;
+    }
+
+    /*Textos dos menus*/
+    .nav ul > li span {
+        font-family: "Futura Bk BT";
+        flex: 1;
+        margin-left: 20px;
+        transition: opacity 0.4s ease, visibility 0.2s ease;
+        line-height: 20px;
+
+
+    }
+
+    /*Hover texto menus*/
+    .nav ul > li:hover {
+        background: #2a7de9;
+        transform: scale(0.95);
+        border-radius: 5px;
+    }
+
+
+    /*Container Submenu*/
+    .nav ul li > ul {
+        position: absolute;
+        width: 150px;
+        margin-left: 30vh;
+        margin-top: -55px;
+        list-style-type: none;
+        background: #1bbfe1;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden; /* Esconde do fluxo visual */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+
+    }
+
+    /*Hover container submenu*/
+    .nav ul > li:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    /*Texto Submenu*/
+    .nav ul li ul > a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        font-family: "Futura Bk BT";
+        padding: 10px;
+
+
+    }
+
+    /*Hover Texto submenu*/
+    .nav ul li ul > a:hover {
+        width: 100%;
+        background: #2a7de9;
+        border-radius: 5px;
+        transform: scale(0.95);
+
+    }
+
+
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------Tela 600PX---------------------------------------------*/
+
+
+@media screen and (max-width: 600px) {
+    /*Barra Lateral*/
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 8vh;
+        background-color: #1bbfe1;
+        padding: 20px 0px 20px;
+        justify-content: center;
+        box-shadow: 3px 0 0 #475aff;
+        /*overflow: hidden;*/
+    }
+
+
+    /*Logo Digistok*/
+    .logo {
+        display: none;
+    }
+
+    /*Menu hamburger*/
+    .btn-list {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+
+    /*------------------MENU-------------------*/
+    /*Menus*/
+    .nav ul li > a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        border-radius: 5px;
+        width: 8.5vh;
+        color: black;
+        transition: 0.05s ease-in;
+        padding: 20px;
+    }
+
+    /*Mantém o item do menu selecionado*/
+    .nav ul > li.ativo {
+        background: #2a7de9;
+        border-radius: 5px;
+        transform: scale(0.80);
+        list-style: none;
+    }
+
+    /* Aumenta os icons*/
+    .nav ul li > a > i.icon-left {
+        font-size: 25px;
+    }
+
+    /*Apaga texto menu*/
+    .nav ul > li span {
+        display: none;
+    }
+
+    /*Apaga icon da direita*/
+    .nav ul li > a > i.icon-rigth {
+        display: none;
+
+    }
+
+    /*------------------SUBMENU-------------------*/
+    /*Container Submenu*/
+    .nav ul li > ul.submenu {
+        position: absolute;
+        width: 150px;
+        margin-left: 9.3vh;
+        margin-top: -65px;
+        list-style-type: none;
+        background: #1bbfe1;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden; /* Esconde do fluxo visual */
+        transition: opacity 0.1s ease, visibility 0.1s ease;
+    }
+
+
+    /*Texto Submenu*/
+    .nav ul li ul > a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        font-family: "Futura Bk BT";
+        padding: 10px;
+
+
+    }
+
+    /*Hover Texto submenu*/
+    .nav ul li ul > a:hover {
+        width: 100%;
+        background: #2a7de9;
+        border-radius: 5px;
+        transform: scale(0.95);
+
+    }
+
+    /*Mostra o submenu*/
+    .nav ul li > ul.ativo {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------Tela 480---------------------------------------------*/
+@media screen and (max-width: 480px ) {
+
+    /*Barra Lateral*/
+    .nav {
+        width: 6.5vh;
+    }
+
+    /* Aumenta os icons*/
+    .nav ul li > a > i.icon-left {
+        font-size: 18px;
+    }
+
+    /*------------------MENU-------------------*/
+    /*Menus*/
+    .nav ul li > a {
+        width: 8.5vh;
+        padding: 15px 10px;
+    }
+
+    /*------------------SUBMENU-------------------*/
+    /*Container Submenu*/
+    .nav ul li > ul.submenu {
+
+        margin-left: 8vh;
+        margin-top: -50px;
+
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------Tela 320---------------------------------------------*/
+@media screen and (max-width: 320px ) {
+
+    /*Barra Lateral*/
+    .nav {
+        width: 8vh;
+        position: absolute;
+        height: 100%;
+    }
+
+    /* Aumenta os icons*/
+    .nav ul li > a > i.icon-left {
+        font-size: 18px;
+    }
+
+    /*------------------MENU-------------------*/
+    /*Menus*/
+    .nav ul li > a {
+        width: 8.9vh;
+        padding: 15px 8px;
+    }
+
+    /*------------------SUBMENU-------------------*/
+    /*Container Submenu*/
+    .nav ul li > ul.submenu {
+
+        margin-left: 9.8vh;
+        margin-top: -50px;
+
+    }
+}
+
+
+
+
