@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-relatorio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../menu/style-menu.css">
+  <link rel="icon" href="../../Imag/icon-brows.png" type="Digistok">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="../menu/script-menu.js" defer></script>
+
+
+  <title>Digistock - Relatório</title>
+</head>
+<body>
+
+<!--Recebe o menu-->
+<div class="menu" id="menu"></div>
+<script>
+  //Carrega Menu//
+  fetch('../menu/menu.html')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+          })
+          .then(data => {
+            document.getElementById('menu').innerHTML = data;
+          })
+          .catch(error => {
+            console.error('Houve um problema com a requisição fetch:', error);
+          });
+</script>
+
+  <!-- Conteúdo Principal -->
+  <div class="conteudo-principal">
+    <h1 class="titulo-pagina">Relatório de Estoque</h1>
+
+    <div class="filtros">
+      <div class="grade-filtros">
+        <div class="grupo-form">
+          <label class="rotulo-form">Produto</label>
+          <input type="text" class="controle-form" placeholder="Nome do produto">
+        </div>
+
+        <div class="grupo-form">
+          <label class="rotulo-form">Fornecedor</label>
+          <select class="controle-form">
+            <option value="">Selecione um fornecedor</option>
+            <option>Fornecedor 1</option>
+            <option>Fornecedor 2</option>
+          </select>
+        </div>
+
+        <div class="grupo-form">
+          <label class="rotulo-form">Cliente</label>
+          <select class="controle-form">
+            <option value="">Selecione um cliente</option>
+            <option>Cliente 1</option>
+            <option>Cliente 2</option>
+          </select>
+        </div>
+
+        <div class="grupo-form">
+          <label class="rotulo-form">Tipo de Movimentação</label>
+          <select class="controle-form">
+            <option value="">Todos</option>
+            <option>Entrada</option>
+            <option>Saída</option>
+            <option>Ajuste de Estoque</option>
+            <option>Transferência</option>
+          </select>
+        </div>
+
+        <div class="grupo-form">
+          <label class="rotulo-form">Categoria</label>
+          <select class="controle-form">
+            <option value="">Todas as categorias</option>
+            <option>Matéria Prima</option>
+            <option>Produto Acabado</option>
+            <option>Material de Consumo</option>
+          </select>
+        </div>
+
+        <div class="grupo-form">
+          <label class="rotulo-form">Local de Estoque</label>
+          <select class="controle-form">
+            <option value="">Todos os locais</option>
+            <option>Depósito Principal</option>
+            <option>Recife</option>
+            <option>Loja</option>
+          </select>
+        </div>
+
+        <div class="grupo-form">
+          <label class="rotulo-form">Data Inicial</label>
+          <input type="date" class="controle-form">
+        </div>
+
+        <div class="grupo-form">
+          <label class="rotulo-form">Data Final</label>
+          <input type="date" class="controle-form">
+        </div>
+
+        <div class="grupo-form">
+          <label class="rotulo-form">Status do Estoque</label>
+          <select class="controle-form">
+            <option value="">Todos</option>
+            <option>Disponível</option>
+            <option>Baixo Estoque</option>
+            <option>Sem Estoque</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="container-botoes">
+        <button class="botao botao-primario">
+          <i class="fas fa-search"></i>
+          Pesquisar
+        </button>
+
+        <button class="botao botao-primario">
+          <i class="fas fa-print"></i>
+          Imprimir
+        </button>
+
+        <button class="botao botao-primario">
+          <i class="fas fa-download"></i>
+          Exportar
+        </button>
+      </div>
+    </div>
+
+    <div class="tabela-resultados">
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Produto</th>
+            <th>Fornecedor</th>
+            <th>Local</th>
+            <th>Tipo Movimentação</th>
+            <th>Quantidade</th>
+            <th>Valor Unitário</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="8" style="text-align: center;">Nenhum resultado encontrado</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digistok</title>
+    <link rel="stylesheet" href="style-home.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"/>
+
+
+    <link rel="stylesheet" href="../menu/style-menu.css">
+    <link rel="icon" href="../../Imag/icon-brows.png" type="Digistok">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../menu/script-menu.js" defer></script>
+
+
+  </head>
+  
+  <body>
+  <!--Recebe o menu-->
+  <div class="menu" id="menu"></div>
+  <script>
+    //Carrega Menu//
+    fetch('../menu/menu.html')
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+              }
+              return response.text();
+            })
+            .then(data => {
+              document.getElementById('menu').innerHTML = data;
+            })
+            .catch(error => {
+              console.error('Houve um problema com a requisição fetch:', error);
+            });
+  </script>
+      
+    
+    <div class="content" id="content-area">
+      <div class="NOME-PRINCIPAL">
+          <h1>Cadastros Gerais</h1>
+             
+      </div>
+
+      <!-- O conteúdo dinâmico será carregado aqui -->
+      <div class="container">
+
+          <!--Frabricantes-->
+        <div class="tela-cinza">
+          <div class="name-C">
+            <h1 class="Cadrastro-title">Fabricantes</h1>
+          </div>
+          <div>
+            <form class="Form">
+            <div class="coluna1">
+                <div class="Campo-txt">
+                  <span><strong>Nome do fabricante:</strong></span>
+                  <input placeholder="" />
+                </div>
+              </div>
+              <div class="coluna1">
+                <div class="Campo-txt">
+                    <span>
+                      <strong>País de origem:</strong>
+                    </span>
+                    <input placeholder="" />
+                </div>
+              </div>
+              <div class="coluna1">
+                <div class="Campo-txt">
+                  <span><strong>Website:</strong></span>
+                  <input placeholder="" />
+                </div>
+              </div>
+              <div class="botao-cadastrar">
+                <button>
+                  Cadastrar fabricante
+                </button>
+              </div> 
+            </form>
+          </div>
+        </div>
+
+        <!--Fornecedores de produtos-->
+        <div class="tela-cinza">
+          <div class="name-C">
+            <h1 class="Cadrastro-title">Fornecedores de produtos</h1>
+          </div>
+          <div>
+            <form class="Form">
+            <div class="coluna1">
+                <div class="Campo-txt">
+                  <span><strong>Nome do fornecedor:</strong></span>
+                  <input placeholder="" />
+                </div>
+              </div>
+              <div class="coluna1">
+                <div class="Campo-txt">
+                    <span>
+                      <strong>Contato:</strong>
+                    </span>
+                    <input placeholder="" />
+                </div>
+              </div>
+              <div class="coluna1">
+                <div class="Campo-txt">
+                  <span><strong>Endereço:</strong></span>
+                  <input placeholder="" />
+                </div>
+              </div>
+              <div class="botao-cadastrar">
+                <button>
+                  Cadastrar fornecedor
+                </button>
+              </div> 
+            </form>
+          </div>
+        </div>
+
+        <!--Categoria de produto-->
+        <div class="tela-cinza">
+          <div class="name-C">
+            <h1 class="Cadrastro-title">Categoria de produto</h1>
+          </div>
+          <div>
+            <div class="coluna1">
+                <div class="Campo-txt">
+                  <span><strong>Nome da categoria:</strong></span>
+                  <input placeholder="" />
+                </div>
+              </div>
+              <div class="coluna1">
+                <div class="Campo2-txt">
+                    <span>
+                      <strong>Descrição:</strong>
+                    </span>
+                    <input placeholder="" />
+                </div>
+              </div>
+              <div class="botao-cadastrar">
+                <button>
+                  Cadastrar categoria
+                </button>
+              </div> 
+          </div>
+        </div>
+
+        <!--Locais de estoque-->
+        <div class="tela-cinza">
+          <div class="name-C">
+            <h1 class="Cadrastro-title">Locais de estoque</h1>
+          </div>
+          <div>
+            <form class="Form">
+            <div class="coluna1">
+                <div class="Campo-txt">
+                  <span><strong>Nome do local:</strong></span>
+                  <input placeholder="" />
+                </div>
+              </div>
+              <div class="coluna1">
+                <div class="Campo-txt">
+                    <span>
+                      <strong>Endereço:</strong>
+                    </span>
+                    <input placeholder="" />
+                </div>
+              </div>
+              <div class="coluna1">
+                <div class="Campo-txt">
+                  <span><strong>Capacidade:</strong></span>
+                  <input placeholder="" />
+                </div>
+              </div>
+              <div class="botao-cadastrar">
+                <button>
+                  Cadastrar local de estoque
+                </button>
+              </div> 
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+
+  </body>
+</html>

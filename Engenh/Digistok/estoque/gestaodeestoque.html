@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitock - Relatorio</title>
+    <link rel="stylesheet" href="style-estoque.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="../menu/style-menu.css">
+    <link rel="icon" href="../../Imag/icon-brows.png" type="Digistok">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../menu/script-menu.js" defer></script>
+</head>
+<body>
+<!--Recebe o menu-->
+<div class="menu" id="menu"></div>
+<script>
+    //Carrega Menu//
+    fetch('../menu/menu.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('menu').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Houve um problema com a requisição fetch:', error);
+        });
+</script>
+
+<div class="geral">
+
+
+    <!--textos--->
+    <h1 class="titulo">Gestão de Estoque</h1>
+    <h1 class="movimento">Movimentações Recentes</h1>
+    <!--identificadores--->
+    <div class="identificadores"></div>
+    <h1 class="entrada">Entrada de Produtos:</h1>
+    <h1 class="eproduto">Produto:</h1>
+    <h1 class="equantidade">Quantidade:</h1>
+    <h1 class="edata">Data de Entrada:</h1>
+    <h1 class="eestoque">Estoque de entrada:</h1>
+    <!------------------>
+    <h1 class="saida">Saída de Produtos</h1>
+    <h1 class="sproduto">Produto:</h1>
+    <h1 class="squantidade">Quantidade:</h1>
+    <h1 class="sdata">Data de saida:</h1>
+    <h1 class="sestoque">Motivo da saída:</h1>
+    <!--quadrados--->
+    <div class="qua1"></div>
+    <div class="qua2"></div>
+    <!--selects--->
+    <select class="entrada_produto" id="pentrada" onchange="ControleDeSelecao();"></select>
+    <select class="entrada_quantidade" id="qentrada" onchange="ControleDeSelecao();"></select>
+    <select class="data_entrada" id="dentrada" onchange="ControleDeSelecao();"></select>
+    <select class="estoque_entrada" id="eentrada" onchange="ControleDeSelecao();"></select>
+    <select class="produto_saida" id="psaida" onchange="ControleDeSelecao();"></select>
+    <select class="saida_quantidade" id="qsaida" onchange="ControleDeSelecao();"></select>
+    <select class="data_saida" id="dsaida" onchange="ControleDeSelecao();"></select>
+    <select class="motivo_saida" id="msaida" onchange="ControleDeSelecao();"></select>
+    <!--botao--->
+    <button class="bentrada" id="bentrada">Registrar Entrada</button>
+    <button class="bsaida" id="bsaida">Resgistrar Saída</button>
+    <table id="tabela-movimentacoes">
+        <!--Movimentaco recente--->
+        <thead>
+        <tr>
+            <th id="data-header">Data</th>
+            <th id="tipo-header">Tipo</th>
+            <th id="produto-header">Produto</th>
+            <th id="quantidade-header">Quantidade</th>
+        </tr>
+        </thead>
+
+    </table>
+</div>
+</body>
+</html>

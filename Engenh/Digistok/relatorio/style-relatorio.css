@@ -1,0 +1,130 @@
+/* Cores pra parte principal */
+:root {
+    --primaria: #2563eb;
+    --primaria-escura: #1d4ed8;
+    --cinza-100: #f3f4f6;
+    --cinza-200: #e5e7eb;
+    --cinza-700: #374151;
+    --cinza-800: #1f2937;
+  }
+  
+  /* Reset e fontes */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Futura Bk BT";
+  }
+  
+  body {
+    background: var(--cinza-100);
+    display: flex;
+    min-height: 100vh;
+    font-family: "Futura Bk BT";
+  }
+
+  /* Conteúdo Principal */
+  .conteudo-principal {
+    flex: 1;
+    padding: 2rem;
+    margin-left: 200px;
+  }
+  
+  .titulo-pagina {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cinza-800);
+    margin-bottom: 2rem;
+  }
+  
+  /* Filtros */
+  .filtros {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .grade-filtros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .grupo-form {
+    margin-bottom: 1rem;
+  }
+  
+  .rotulo-form {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--cinza-700);
+    margin-bottom: 0.5rem;
+  }
+  
+  .controle-form {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--cinza-200);
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Botões */
+  .botao {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .botao-primario {
+    background: var(--primaria);
+    color: white;
+    border: none;
+  }
+  
+  .botao-primario:hover {
+    background: var(--primaria-escura);
+  }
+  
+  /* Tabela de Resultados */
+  .tabela-resultados {
+    width: 100%;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th {
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--cinza-700);
+    background: var(--cinza-100);
+  }
+  
+  td {
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: var(--cinza-700);
+    border-top: 1px solid var(--cinza-200);
+  }
+  
+  .container-botoes {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }

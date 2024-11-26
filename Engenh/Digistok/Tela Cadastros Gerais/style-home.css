@@ -1,12 +1,14 @@
 
-body {
+/*Geral*/
+* {
   margin: 0;
-  height: 100vh; /* Para ocupar a altura da janela */
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Futura Bk BT";
 }
 
 .Cadrastro-title {
   font-size: 4vh;
-  font-family: "Futura Bk BT";
   color: #333;
   margin-bottom: 20px;
 }
@@ -54,7 +56,6 @@ body {
 }
 label {
   font-weight: bold;
-  font-family: "Futura Bk BT";
   display: block;
   margin-bottom: 10px;
 }
@@ -78,20 +79,6 @@ input {
   width: 100%;
 }
 
-.tela-cinza {
-  background-color: #C0C0C0;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 800px;
-  padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-self: center;
-  margin-top: 20px;
-}
-
 
 .name-C {
   padding-bottom: 20px;
@@ -104,46 +91,28 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: "Futura Bk BT";
-
 }
 
 .NOME-PRINCIPAL {
- 
-  margin-left: 3%;
+  margin-left: 10%;
   text-align: left;
   font-size: large;
-  font-family: "Futura Bk BT";
-  color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+h1{
+  color: #04a1cc;
 }
 
 
-
- 
-
-.Form {
-display: flex;
-flex-direction: column;
-gap: 40px;
-flex-wrap: wrap;
-}
-
-.coluna1, .coluna3 {
-display: flex;
-justify-content: space-between;
-margin-bottom: 15px;
-flex-wrap: wrap;
-width: 50%;
-}
-
-.coluna2 {
+.coluna1 {
 display: flex;
 justify-content: space-between;
 margin-bottom: 15px;
 flex-wrap: wrap;
 width: 100%;
 }
+
 
 .Campo-txt input, .Campo-txt select {
 width: 100%;
@@ -153,6 +122,15 @@ border-radius: 4px;
 font-size: 15px;
 }
 
+.Campo2-txt input, .Campo2-txt select {
+  width: 150%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+  height: 90px;
+  }
+
 .Campo-txt {
 width: 100%;
 }
@@ -160,7 +138,7 @@ width: 100%;
 .vertical {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 20px;
   font-size: 20px;
   width: 50%;
 }
@@ -168,7 +146,7 @@ width: 100%;
 .img-column {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 20px;
   font-size: 20px;
   width: 100%;
 }
@@ -182,7 +160,7 @@ width: 100%;
 
 
 
-.botao-enviar button {
+.botao-cadastrar button {
   background-color: #1bbfe1;
   color: #fff;
   border: none;
@@ -191,33 +169,7 @@ width: 100%;
   border-radius: 4px;
   cursor: pointer;
 }
-.botao-enviar button:hover {
-  background-color: #0a94c2;
-}
 
-.vertical img {
-  width: 150px;
-  height: auto;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.vertical button {
-  background-color: #1bbfe1;
-  color: #fff;
-  border: none;
-  padding: 8px 15px;
-  font-size: 14px;
-  border-radius: 4px;
-  cursor: pointer;
-}  
-.vertical button:hover {
-  background-color: #0a94c2;
-}
-.nomeP{
-  padding: 20px 20px 20px;
-  top: 0;
-}
 
   /* Área de conteúdo */
   .content {
@@ -243,3 +195,31 @@ width: 100%;
   .coluna1 .Campo-txt{
     width: 50%;
   }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 40px; /* Espaço entre os quadros */
+    /*max-width: ;*/
+    /*margin: 25px; */
+} 
+
+.Cadrastro-title{
+  color: #04a1cc;
+}
+
+.tela-cinza {
+  background-color: #C0C0C0;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 650px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: auto;
+  margin-top: 5px;
+}
+
+
