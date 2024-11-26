@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #f0f0f0;
+}
+
+/* Conteúdo Dashboard */
+.conteudo-dashboard {
+    margin-left: 18%;
+    width: 82%;
+    padding: 20px;
+}
+
+.titulo-dashboard {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cards-metricas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card-metrica {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    color: #333;
+}
+
+.vendas {
+    background-color: #90EE90;
+}
+
+.pagar {
+    background-color: #FFB6B6;
+}
+
+.receber {
+    background-color: #87CEEB;
+}
+
+.titulo-card {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.valor-card {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.container-graficos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.container-semestre {
+    margin-bottom: 20px;
+}
+
+.card-grafico {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.botoes-grafico {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-grafico {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+
+.btn-grafico.ativo {
+    background: #1bbfe1;
+    color: white;
+    border-color: #1bbfe1;
+}
+
+.alertas-estoque {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-alerta {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.contador-alerta {
+    background: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 12px;
+}

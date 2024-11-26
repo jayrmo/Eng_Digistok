@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digistock - Dashboard</title>
+    <link rel="stylesheet" href="../dashboard/style-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="../dashboard/script-dashboard.js"></script>
+
+    <link rel="stylesheet" href="../menu/style-menu.css">
+    <link rel="icon" href="../../Imag/icon-brows.png" type="Digistok">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../menu/script-menu.js" defer></script>
+
+</head>
+<body>
+<!--Recebe o menu-->
+<div class="menu" id="menu"></div>
+<script>
+    //Carrega Menu//
+    fetch('../menu/menu.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('menu').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Houve um problema com a requisição fetch:', error);
+        });
+</script>
+
+
+
+    <div class="conteudo-dashboard">
+        <h1 class="titulo-dashboard">Dashboard</h1>
+        
+        <div class="cards-metricas">
+            <div class="card-metrica vendas">
+                <div class="titulo-card">Vendas do dia</div>
+                <div class="valor-card">R$ 0,0</div>
+            </div>
+            <div class="card-metrica pagar">
+                <div class="titulo-card">A pagar hoje</div>
+                <div class="valor-card">R$ 0,0</div>
+            </div>
+            <div class="card-metrica receber">
+                <div class="titulo-card">A receber hoje</div>
+                <div class="valor-card">R$ 0,0</div>
+            </div>
+        </div>
+
+        <div class="container-graficos">
+            <div class="card-grafico">
+                <h3>Vendas por categoria (27/08/2024)</h3>
+                <canvas id="grafico-pizza"></canvas>
+            </div>
+            <div class="card-grafico">
+                <h3>Receita x Despesa x Saldo</h3>
+                <div class="botoes-grafico">
+                    <button class="btn-grafico ativo">Consolidado</button>
+                    <button class="btn-grafico">Receita e Desp</button>
+                    <button class="btn-grafico">Saldo</button>
+                </div>
+                <canvas id="grafico-linha"></canvas>
+            </div>
+        </div>
+
+        <div class="container-semestre">
+            <div class="card-grafico">
+                <h3>Vendas Primeiro Semestre</h3>
+                <canvas id="grafico-barras"></canvas>
+            </div>
+        </div>
+
+        <div class="alertas-estoque">
+            <h3>Alerta de estoque</h3>
+            <div class="item-alerta">
+                <span>Camisetas</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+            <div class="item-alerta">
+                <span>Shorts</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+            <div class="item-alerta">
+                <span>Calças</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+            <div class="item-alerta">
+                <span>Tênis</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+            <div class="item-alerta">
+                <span>Moletons</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+            <div class="item-alerta">
+                <span>Jaquetas</span>
+                <span class="contador-alerta">0/0</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

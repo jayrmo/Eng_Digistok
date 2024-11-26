@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digistok</title>
+    <link rel="stylesheet" href="style-home.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"/>
+    <script src="script-home.js" defer></script>
+
+
+    <link rel="stylesheet" href="../menu/style-menu.css">
+    <link rel="icon" href="../../Imag/icon-brows.png" type="Digistok">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../menu/script-menu.js" defer></script>
+
+  </head>
+  <body>
+  <!--Recebe o menu-->
+  <div class="menu" id="menu"></div>
+  <script>
+    //Carrega Menu//
+    fetch('../menu/menu.html')
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+              }
+              return response.text();
+            })
+            .then(data => {
+              document.getElementById('menu').innerHTML = data;
+            })
+            .catch(error => {
+              console.error('Houve um problema com a requisição fetch:', error);
+            });
+  </script>
+      
+    
+    <div class="content" id="content-area">
+      <div class="NOME-PRINCIPAL">
+          <h1 id="noem234">Cadastro de Produtos</h1>
+             
+      </div>
+      <!-- O conteúdo dinâmico será carregado aqui -->
+     
+      
+
+    
+      <div class="tela-cinza">
+        <div class="name-C">
+           <h1 class="Cadrastro-title">Cadastro</h1>
+        </div>
+        <div>
+        
+          <form class="Form">
+           <div class="coluna1">
+              <div class="Campo-txt">
+                <span><strong>Nome:</strong></span>
+                <input placeholder="Nome do Produto :" />
+              </div>
+              <div class="Campo-txt">
+                <span><strong>Codigo:</strong></span>
+                <input placeholder="Codigo do Produto :" />
+              </div>
+            </div>
+            <div class="coluna2">
+              <div class="vertical">
+                
+                <span><strong>Quantidade</strong></span>
+                
+                <div class="horizontal">
+                  <div class="Campo-txt">
+                    <span>min</span>
+                    <input placeholder="0" />
+                  </div>
+                  <div class="Campo-txt">
+                    <span>max</span>
+                    <input placeholder="0"/>
+                  </div>
+                </div>
+                <div class="Campo-txt">
+
+                  <span><strong>Peso:</strong></span>
+                  <input placeholder="Peso em KG" />
+  
+                </div>
+              </div>
+
+              
+              
+              <div class="vertical">
+                <img src="Foto-produto" />
+                <button>Enviar</button>
+
+              </div>
+            </div>
+            <div class="coluna3">
+              <div class="Campo-txt">
+                  <span>
+                    <strong>Fornecedor :</strong>
+                  </span>
+                  <input placeholder="Nome Fornecedor :" />
+              </div>
+                
+            </div>
+          
+            <div class="botao-enviar">
+              <button class="registrar">
+                RESGISTRAR PRODUTO
+              </button>
+            </div> 
+          
+          </form>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

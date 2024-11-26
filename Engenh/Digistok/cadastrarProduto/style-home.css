@@ -1,0 +1,240 @@
+
+body {
+  margin: 0;
+  height: 100vh; /* Para ocupar a altura da janela */
+}
+
+.Cadrastro-title {
+  font-size: 4vh;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.botoes {
+  background: #04a1cc;
+  color: #000000;
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  font-size: large;
+  padding: 1%;
+}
+
+#botao-config {
+  cursor: pointer;
+}
+#botao-config:hover {
+  color: #001aff;
+}
+
+#botao-mini {
+  cursor: pointer;
+}
+#botao-mini:hover {
+  color: #001aff;
+}
+
+#botao-maxi {
+  cursor: pointer;
+}
+#botao-maxi:hover {
+  color: #001aff;
+}
+
+#botao-fechar:hover {
+  color: #001aff;
+}
+#botao-fechar {
+  cursor: pointer;
+}
+
+.nome-produto{
+  margin-bottom: 15px;
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+input[type="text"]:focus {
+  border-color: #1bbfe1;
+  outline: none;
+}
+
+input[type="text"] {
+ 
+  margin-left: 300px;
+  
+  padding-left: 5px;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.tela-cinza {
+  background-color: #C0C0C0;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+
+.name-C {
+  padding-bottom: 20px;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+
+body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.NOME-PRINCIPAL {
+ 
+  margin-left: 3%;
+  text-align: left;
+  font-size: large;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+
+ 
+
+.Form {
+display: flex;
+flex-direction: column;
+gap: 40px;
+flex-wrap: wrap;
+}
+
+.coluna1, .coluna3 {
+display: flex;
+justify-content: space-between;
+margin-bottom: 15px;
+flex-wrap: wrap;
+width: 50%;
+}
+
+.coluna2 {
+display: flex;
+justify-content: space-between;
+margin-bottom: 15px;
+flex-wrap: wrap;
+width: 100%;
+}
+
+.Campo-txt input, .Campo-txt select {
+width: 100%;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 15px;
+}
+
+.Campo-txt {
+width: 100%;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  font-size: 20px;
+  width: 50%;
+}
+
+.img-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 20px;
+}
+
+
+
+.botao-enviar button {
+  background-color: #1bbfe1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.botao-enviar button:hover {
+  background-color: #0a94c2;
+}
+
+.vertical img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.vertical button {
+  background-color: #1bbfe1;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}  
+.vertical button:hover {
+  background-color: #0a94c2;
+}
+.nomeP{
+  padding: 20px 20px 20px;
+  top: 0;
+}
+
+  /* Área de conteúdo */
+  .content {
+    display: grid;
+    flex-direction: column;
+    width: 100%;
+    max-width: 82.5%;
+    overflow-y: auto;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+    align-self: center;
+  }
+
+  .coluna1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .coluna1 .Campo-txt{
+    width: 50%;
+  }
