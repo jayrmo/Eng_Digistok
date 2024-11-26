@@ -79,7 +79,7 @@ input {
 }
 
 .tela-cinza {
-  background-color: #C0C0C0;
+  background-color: #e0e0e0;
   border-radius: 8px;
   width: 100%;
   max-width: 800px;
@@ -96,6 +96,7 @@ input {
 .name-C {
   padding-bottom: 20px;
   font-size: 25px;
+
   margin-top: 10px;
 }
 
@@ -122,6 +123,7 @@ display: flex;
 flex-direction: column;
 gap: 40px;
 flex-wrap: wrap;
+  background-color: #e0e0e0;
 }
 
 .coluna1, .coluna3 {
