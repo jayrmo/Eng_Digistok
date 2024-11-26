@@ -95,7 +95,7 @@ input {
 
 .name-C {
   padding-bottom: 20px;
-  font-size: 24px;
+  font-size: 25px;
   margin-top: 10px;
 }
 
@@ -105,22 +105,17 @@ body{
   flex-direction: row;
   justify-content: space-between;
   font-family: "Futura Bk BT";
-
 }
 
 .NOME-PRINCIPAL {
- 
   margin-left: 3%;
   text-align: left;
-  font-size: large;
+  font-size: 20px;
   font-family: "Futura Bk BT";
   color: #333;
   margin-bottom: 10px;
 }
 
-
-
- 
 
 .Form {
 display: flex;
@@ -224,6 +219,7 @@ width: 100%;
     display: grid;
     flex-direction: column;
     width: 100%;
+    margin-top: 10px;
     max-width: 82.5%;
     overflow-y: auto;
   }

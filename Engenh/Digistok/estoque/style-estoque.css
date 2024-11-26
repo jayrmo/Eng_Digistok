@@ -1,284 +1,77 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Futura Bk BT";
 }
 
 .geral{
-    display: flex;
-    margin-left: 200px;
-
+  margin-left: 210px;
+  margin-right: 20px;
+  font-family: "Futura Bk BT";
+  background-color: white;
 }
 
-h1.entrada, h1.saida{
-    font-size: 30px;
-    position: absolute;
-    margin-top: 50px;
-    margin-left: 120px;
+h1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.titulo {
-    font-family: 'Inter';
-    font-size: 40px;
-    color: #20B2AA;
-    text-align: center;
-    font-weight: bold;
-    width: 400px;
-    height: 48px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-185%, -1000%);
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
-
-.saida {
-
-    color: #20B2AA;
-    text-align: center;
-    font-weight: bold;
-    width: 366px;
-    height: 48px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(55%, -740%);
+.form-box {
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 48%;
 }
-
-.entrada {
-    font-family: "Futura Bk BT";
-    font-size: 30px;
-    color: #20B2AA;
-    text-align: center;
-    font-weight: bold;
-    width: 366px;
-    height: 48px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-153%, -750%);
+.form-box h2 {
+  color: #00bcd4;
 }
-
-.movimento {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-185%, 600%);
+.form-box label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
-
-.qua1 {
-    width: 400px;
-    height: 400px;
-    background-color: lightgray;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%, -70%);
-    border-radius: 20px;
-    z-index: -999;
+.form-box input, .form-box select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-
-.qua2 {
-    width: 400px;
-    height: 400px;
-    background-color: lightgray;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(40%, -70%);
-    border-radius: 20px;
-    z-index: -999;
+.form-box button {
+  background-color: #0097a7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-select {
-    background-color: white;
-    border: none;
-    padding: 10px;
-    width: 280px;
-    height: 25px;
-    border-radius: 0.5em;
-    color: white;
+.form-box button:hover {
+  background-color: #00796b;
 }
-
-.entrada_produto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-130%, -1000%)
+.recent-movements {
+  margin-top: 20px;
 }
-
-.entrada_quantidade {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-130%, -600%)
+.recent-movements h2 {
+  font-family: "Futura Bk BT";
+  font-size: 24px;
+  margin-bottom: 10px;
 }
-
-.data_entrada {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-130%, -200%)
+.recent-movements table {
+  width: 100%;
+  border-collapse: collapse;
 }
-
-.estoque_entrada {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-130%, 200%)
+.recent-movements th, .recent-movements td {
+  border: 1px solid #00bcd4;
+  padding: 10px;
+  text-align: left;
 }
-
-.produto_saida {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(65%, -1000%)
-}
-
-.saida_quantidade {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(65%, -600%)
-}
-
-.data_saida {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(65%, -200%)
-}
-
-.motivo_saida {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(65%, 200%)
-}
-
-.identificadores {
-    @font-face {
-        font-family: "Futura Bk BT";
-    }
-}
-
-.eproduto {
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-390%, -800%)
-}
-
-.equantidade {
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-280%, -530%)
-}
-
-.edata {
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-205%, -270%)
-}
-
-.eestoque {
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-170%, -20%)
-}
-
-.sproduto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(200%, -800%)
-}
-
-.squantidade {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(140%, -530%)
-}
-
-.sdata {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(120%, -270%)
-}
-
-.sestoque {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(105%, -20%)
-}
-
-button {
-    background-color: #007797;
-    border: none;
-    padding: 13px;
-    width: 150px;
-    border-radius: 0.5em;
-    color: white;
-}
-
-.bentrada {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-348%, 220%)
-}
-
-.bsaida {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(173%, 220%)
-}
-
-button:hover {
-    background-color: deepskyblue;
-    cursor: pointer;
-}
-
-#tabela-movimentacoes {
-    border-collapse: collapse;
-    width: 80%;
-}
-
-#tabela-movimentacoes th,
-#tabela-movimentacoes td {
-    border: 1px solid #ddd;
-    padding: 30px;
-    text-align: left;
-}
-
-#tabela-movimentacoes th {
-    background-color: #007797;
-    color: white;
-}
-
-#tabela-movimentacoes {
-    position: absolute;
-    top: 800px;
-    left: 192px;
-}
-
-.identificadores {
-    font-family: "Futura Bk BT"; /* Substitua por uma fonte sans-serif de sua preferência */
-    font-size: 14px; /* Ajuste o tamanho conforme necessário */
-    color: #333; /* Cinza escuro */
-    text-align: left;
-    padding: 5px;
+.recent-movements th {
+  background-color: #00bcd4;
+  color: white;
 }

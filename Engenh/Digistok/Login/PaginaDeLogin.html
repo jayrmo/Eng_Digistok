@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digistock-Login</title>
+    <link rel="icon" href="../../Imag/icon-brows.png" type="Digistok">
+    <script src="script-login.js" defer></script>
     <style>
         body {
             font-family: "Futura Bk BT";
@@ -66,7 +68,7 @@
             position: absolute;
             margin-left: 90px;
             top: 50%;
-            left: 50%;
+            left: 48.5%;
             transform: translate(130%, 600%);
         }
 
@@ -114,29 +116,45 @@
             left: 50%;
             transform: translate(720%, 275%)
         }
+        .erro{
+            display: block;
+            position: absolute;
+            font-size: 18px;
+            margin-left: 90px;
+            width: 250px;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            top: 49%;
+            left: 31%;
+            transform: translate(130%, 600%);
+            color: red;
+        }
+
     </style>
 </head>
 <body>
 </h1>
 <img src="" alt="">
 <div class="tela-login">
-    <input class="usuario" type="text" placeholder="USUÁRIO">
+    <input class="usuario" type="text" id="usuario" required placeholder="USUÁRIO">
     <br><br>
-    <input class="senha" type="password" placeholder="SENHA">
+    <input class="senha" type="password" id="senha" required placeholder="SENHA">
     <br><br>
-    <a href="../dashboard/dashboard.html">
-
-        <button class="botao" >ENTRAR</button>
+    <a href="#">
+        <button  class="botao" id="botao">ENTRAR</button>
     </a>
 </div>
 <div class="recuperar-senha">
     <a href="#" style="color: white">Esqueci minha senha
     </a>
 </div>
+    <p id="mensagem"></p>
 <img class="logo" src="https://i.ibb.co/VD2xDtF/Icon.png">
 <img class="logo-nome" src="https://i.ibb.co/WpQh5Gz/Group-1.png">
 <img class="boas-vindas" src="https://i.ibb.co/HKmGjQ0/Boas-Vindas.png">
 <img class="incone-usuario" src="https://i.ibb.co/cN7tZPV/imagem-2024-10-25-230159106.png">
 <img class="incone-senha" src="https://i.ibb.co/dDggKfv/imagem-2024-10-25-230449080.png">
+
 </body>
 </html>

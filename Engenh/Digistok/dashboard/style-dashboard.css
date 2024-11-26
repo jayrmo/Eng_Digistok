@@ -18,8 +18,9 @@ body {
 }
 
 .titulo-dashboard {
-    font-size: 2em;
-    color: #333;
+    font-family: "Futura Bk BT";
+    font-size: 25px;
+    color: black;
     margin-bottom: 20px;
 }
 

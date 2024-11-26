@@ -26,15 +26,15 @@
   /* Conteúdo Principal */
   .conteudo-principal {
     flex: 1;
-    padding: 2rem;
+    padding: 10px 20px;
     margin-left: 200px;
   }
   
   .titulo-pagina {
-    font-size: 1.5rem;
+    font-size: 30px;
     font-weight: 600;
     color: var(--cinza-800);
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
   }
   
   /* Filtros */

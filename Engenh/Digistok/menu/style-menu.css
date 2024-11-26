@@ -45,7 +45,7 @@
         align-items: start;
         justify-content: space-between;
         text-decoration: none;
-        padding: 15px 10px 15px 10px;
+        padding: 13px 10px 13px 10px;
         border-radius: 5px;
         width: 29vh;
         color: black;
@@ -69,9 +69,14 @@
 
     }
 
+    .nav ul > li {
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
     /*Hover texto menus*/
     .nav ul > li:hover {
         background: #2a7de9;
+        height: 50px;
         transform: scale(0.95);
         border-radius: 5px;
     }
@@ -171,10 +176,7 @@
         margin: 15px;
     }
 
-    /*Hover usuario*/
-    .nav .menu-usuario .user:hover ~ .perfil {
-        display: block;
-    }
+
 
     /*Opção usuario perfil*/
     .nav .menu-usuario .perfil {
@@ -190,15 +192,23 @@
 
     }
 
+    /*Hover usuario*/
+    .nav .menu-usuario:hover .perfil {
+        display: block;
+    }
+
+
     /*Texto perfil*/
     .nav .menu-usuario .perfil a {
         text-decoration: none;
         color: black;
         font-family: "Futura Bk BT";
-        padding: 10px;
 
     }
 
+    .nav .menu-usuario .perfil a > li{
+        padding: 5px 10px 5px 10px;
+    }
     /*hover texto perfil*/
     .nav .menu-usuario .perfil a > li:hover {
         background: #2a7de9;
